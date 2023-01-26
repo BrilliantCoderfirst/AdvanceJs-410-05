@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdvanceJs_410-05</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/76ee0828fa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>
+          <i class="fa-solid fa-quote-left firstQuote"></i
+          ><span id="contentHeading">
+            What is new in the world? Nothing. What is old in the world?
+            Nothing. Everything has always been and will always be.
+          </span>
+          <i class="fa-solid fa-quote-right secondQuote"></i>
+        </h1>
+        <div class="para">
+          <p id="contentPara">sai-baba</p>
+          <div class="horizontalLine"></div>
+        </div>
+        <div class="socialMedia">
+          <img src="img/twitterImage.png" alt="" />
+          <button onclick="fun()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      async function fun() {
+        const response = await fetch("https://api.quotable.io/random");
+        const data = await response.json();
+        console.log(data.content);
+
+        const contentHeading = document.getElementById("contentHeading");
+        const contentPara = document.getElementById("contentPara");
+        contentHeading.innerText = data.content;
+        contentPara.innerText = "~ " + data.authorSlug;
+      }
+    </script>
+  </body>
+</html>

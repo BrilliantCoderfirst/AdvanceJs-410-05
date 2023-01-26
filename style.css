@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 936px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(-21deg, rgba(255, 0, 0, 0), #ff9892);
+}
+.container .box {
+  width: 650px;
+  height: 372px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffd4c7;
+  border-radius: 15px;
+  box-shadow: 1px 10px 15px #e80d0c;
+}
+.container .box h1 {
+  font-size: 33px;
+  font-weight: 800;
+  width: 544px;
+  line-height: 41px;
+}
+.container .box .firstQuote {
+  color: #b30000;
+  padding-right: 10px;
+}
+.container .box .secondQuote {
+  color: #b30000;
+  padding-left: 10px;
+}
+.container .box .para {
+  width: 544px;
+  text-align: center;
+}
+.container .box .para p {
+  font-size: 22px;
+  font-style: italic;
+}
+.container .box .horizontalLine {
+  width: 544px;
+  border-bottom: 2px solid black;
+  margin-top: 19px;
+}
+.container .box .socialMedia {
+  width: 537px;
+  height: 7px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+.container .box .socialMedia img {
+  width: 62px;
+}
+.container .box .socialMedia button {
+  width: 121px;
+  height: 44px;
+  color: white;
+  font-size: 22px;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  background-image: linear-gradient(
+    -21deg,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+}
+
+@media (max-width: 672px) {
+  .container .box {
+    width: 500px;
+    height: 350px;
+  }
+  .container .box h1 {
+    width: 400px;
+  }
+  .container .box .para {
+    width: 410px;
+  }
+  .container .box .horizontalLine {
+    width: 410px;
+  }
+  .container .box .socialMedia {
+    width: 410px;
+  }
+}
+@media (max-width: 513px) {
+  .container .box {
+    width: 250px;
+    height: 695px;
+  }
+  .container .box h1 {
+    width: 200px;
+  }
+  .container .box .para {
+    width: 230px;
+  }
+  .container .box .horizontalLine {
+    width: 230px;
+  }
+  .container .box .socialMedia {
+    width: 230px;
+  }
+}
